@@ -1,0 +1,246 @@
+/* 既存のリセットCSSと基本設定は維持 */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* 既存のダークモード設定も維持 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* 基本レイアウト */
+.main {
+  max-width: 1900px;
+}
+
+.company_name {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: antiquewhite;
+  font-family: 'Futura';
+}
+
+/* アウトラインボックス */
+.outline {
+  margin-top: 50px;
+  position: relative;
+  border: 2px solid #aaa;
+  padding: 1em;
+  border-radius: 15px;
+}
+
+.title_box {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 10px;
+  line-height: 1;
+  font-size: 1.3em;
+  background: white;
+  font-weight: bold;
+}
+
+/* フレックスボックスレイアウト */
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ボーダーボックス */
+.border1, .border2 {
+  margin-top: 40px;
+  border: 2px solid #aaa;
+  width: 100%;
+  padding: 100px;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+}
+
+.border1 {
+  text-align: left;
+}
+
+.border2 {
+  text-align: right;
+  padding: 150px;
+}
+
+.border1:hover, .border2:hover {
+  background-color: azure;
+}
+
+/* イメージスタイル */
+.shopper, .seller {
+  width: 30%;
+}
+
+.seller {
+  margin-left: 55px;
+}
+
+/* テキストスタイル */
+.text_img {
+  font-size: 150%;
+  text-align: center;
+  font-family: "MS PGothic";
+}
+
+.shohin_header {
+  margin-top: 45px;
+  font-size: 125%;
+  text-align: center;
+  font-family: "MS PGothic";
+}
+
+/* キャッチコピー */
+.catch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-family: "Century Gothic";
+}
+
+.catch:before,
+.catch:after {
+  border-top: 1px solid;
+  content: "";
+  width: 25%;
+}
+
+.catch:before {
+  margin-right: 1px;
+}
+
+.catch:after {
+  margin-left: 1px;
+}
+
+/* マージン設定 */
+.margin {
+  margin: 0 5%;
+}
+
+.margin_top {
+  margin-top: 60px;
+}
+
+/* 商品グリッド */
+.select_image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 15%;
+}
+
+.select_box {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: 1px #b2a487 solid;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+/* 商品画像 */
+.submit_image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* フォーム要素 */
+.product {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #aaa;
+  outline: none;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* ボタンスタイル */
+.submit_button {
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #2ba8fb;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  cursor: pointer;
+}
+
+.submit_button:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+}
+
+.submit_button:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+/* モーダル */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* レイアウトヘルパー */
+.center {
+  text-align: center;
+}
+
+.space {
+  margin-top: 30px;
+}
+
+.col_line {
+  display: table;
+}
+
+.row_line {
+  display: flex;
+  justify-content: center;
+}
